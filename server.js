@@ -70,6 +70,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  //res.send('About Page');
+  res.render('projects.hbs', {
+    pageTitle: 'Projects',
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Unable to handle request'
@@ -79,3 +86,7 @@ app.get('/bad', (req, res) => {
 app.listen(port, () => {
   console.log(`Server is up on port ${port}`);
 });
+
+
+// To Update the project on web ex: we added a project page
+//
